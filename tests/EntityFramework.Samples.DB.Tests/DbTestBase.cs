@@ -18,7 +18,11 @@ public abstract class DbTestBase: IDisposable
         {
             dbContext.AddRange(
                 new Customer { Id = 1, Name = "Test" },
-                new Customer { Id = 2, Name = "Test2" }
+                new Customer { Id = 2, Name = "Test2" },
+                new CustomerOrder{ Id = 1, CustomerId = 1, OrderId = 1},
+                new Order { Id = 1, CreatedOn = DateTime.Today },
+                new OrderItem { Id = 1, OrderId = 1, ItemId = 1, CreatedOn = DateTime.Today },
+                new Item { Id = 1, Name = "TestItem1", Price = 1.23m }
             );
             dbContext.SaveChanges();
         }

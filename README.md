@@ -3,6 +3,16 @@ Entityframework samples
 
 ## Test setup with SQlite
 in the unit tests, EF DB context requires to setup as below without DB connection string "Filename=:memory:"
+
+```
+public class Order
+{
+    public int Id { get; set; }
+   
+    public ICollection<OrderItem> OrderItems { get; set; }
+}
+```
+
 ```
         _connection = new SqliteConnection("Filename=:memory:");
         _connection.Open();
@@ -64,6 +74,28 @@ Test setup will be as below with UseLazyLoadingProxies.
 
         var dbContext = new TestSampleShopDbContext(_contextOptions);
 
+```
+
+## Explicit loading
+
+```
+    [Fact]
+    public void LoadCustomerOrderWithCustomer()
+    {
+        using var dbContext = CreateDbContext();
+        var customerOrders = dbContext.CustomerOrders.First(x => x.Id == 1);
+        Assert.NotNull(customerOrders);
+        dbContext.Entry(customerOrders).Reference(x=>x.Customer).Load();
+    }
+
+    [Fact]
+    public void LoadOrderWithOrderItems()
+    {
+        using var dbContext = CreateDbContext();
+        var order = dbContext.Orders.First(x => x.Id == 1);
+        Assert.NotNull(order);
+        dbContext.Entry(order).Collection(x => x.OrderItems).Load();
+    }
 ```
 
 

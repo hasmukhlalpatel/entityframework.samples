@@ -1,6 +1,6 @@
 namespace EntityFramework.Samples.DB.Tests;
 
-public class EagerLoadingTests : DbTestBase
+public class EagerLoadingTests : EagerLoadDbTestBase
 {
     [Fact]
     public void NoEagerLoadingWithOrdersAndOrderItems()

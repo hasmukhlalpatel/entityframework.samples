@@ -1,6 +1,6 @@
 namespace EntityFramework.Samples.DB.Tests;
 
-public class SampleDbLoadTests : DbTestBase
+public class SampleEagerLoadDbLoadTests : EagerLoadDbTestBase
 {
     [Fact]
     public void TestCreateDatabaseWithASampleCustomer()

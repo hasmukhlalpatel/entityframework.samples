@@ -1,5 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-
 namespace EntityFramework.Samples.DB.Tests;
 
 internal class TestSampleShopDbContext: SampleShopDbContext

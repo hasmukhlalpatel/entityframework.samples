@@ -67,3 +67,22 @@ Test setup will be as below with UseLazyLoadingProxies.
 ```
 
 
+## In-memory test with In-memory provider
+In memory will require Microsoft.EntityFrameworkCore.InMemory pacakge t ouser as in memory database.
+In-memory databases are identified by a simple, string name, and it's possible to connect to the same database several times by providing the same name (this is why the sample above must call EnsureDeleted before each test).
+### Test testup
+```
+        _contextOptions = new DbContextOptionsBuilder<SampleShopDbContext>()
+            .UseInMemoryDatabase("SampleShopDbContextTest")
+            .ConfigureWarnings(b => b.Ignore(InMemoryEventId.TransactionIgnoredWarning))
+            .Options;
+
+        var dbContext = new TestSampleShopDbContext(_contextOptions);
+
+        dbContext.Database.EnsureDeleted(); //to use same database names with multiple tests
+        dbContext.Database.EnsureCreated();
+```
+### Useful links
+
+[Testing without your production database system](https://learn.microsoft.com/en-us/ef/core/testing/testing-without-the-database)
+[Creating, seeding and managing a test database](https://learn.microsoft.com/en-us/ef/core/testing/testing-with-the-database)

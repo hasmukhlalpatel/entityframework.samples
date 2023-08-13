@@ -1,6 +1,8 @@
 namespace EntityFramework.Samples.DB.Tests;
 
+#pragma warning disable CA1063
 public abstract class LazyLoadDbTestBase : IDisposable
+#pragma warning restore CA1063
 {
     readonly DbContextOptions<SampleShopDbContext> _contextOptions;
     readonly SqliteConnection _connection;
@@ -15,7 +17,7 @@ public abstract class LazyLoadDbTestBase : IDisposable
             .UseLazyLoadingProxies()
             .Options;
 
-        var dbContext = new TestSampleShopDbContext(_contextOptions);
+        using var dbContext = new TestSampleShopDbContext(_contextOptions);
         if (dbContext.Database.EnsureCreated())
         {
             dbContext.AddRange(
@@ -34,5 +36,6 @@ public abstract class LazyLoadDbTestBase : IDisposable
 
     protected SampleShopDbContext CreateDbContext() => new TestSampleShopDbContext(_contextOptions);
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CA1816:Dispose methods should call SuppressFinalize", Justification = "<Pending>")]
     public void Dispose() => _connection.Dispose();
 }

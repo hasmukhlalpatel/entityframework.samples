@@ -1,4 +1,5 @@
 namespace EntityFramework.Samples.DB.Tests;
+#pragma warning disable CA1852
 
 internal class TestSampleShopDbContext: SampleShopDbContext
 {

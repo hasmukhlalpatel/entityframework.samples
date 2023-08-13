@@ -12,7 +12,7 @@ public abstract class InMemoryDbTestBase
             .ConfigureWarnings(b => b.Ignore(InMemoryEventId.TransactionIgnoredWarning))
             .Options;
 
-        var dbContext = new TestSampleShopDbContext(_contextOptions);
+        using var dbContext = new TestSampleShopDbContext(_contextOptions);
 
         dbContext.Database.EnsureDeleted(); //to use same database names with multiple tests
         dbContext.Database.EnsureCreated();

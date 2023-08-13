@@ -9,15 +9,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{451A9A9C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{63365C20-3303-4E13-96BA-9CF03B463512}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		global.json = global.json
 		README.md = README.md
+		stylecop.json = stylecop.json
+		SamplesApp.ruleset = SamplesApp.ruleset
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Samples.DB", "src\EntityFramework.Samples.DB\EntityFramework.Samples.DB.csproj", "{991A64FD-F56F-4B8D-822F-86695235F4CC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Samples.DB.Tests", "tests\EntityFramework.Samples.DB.Tests\EntityFramework.Samples.DB.Tests.csproj", "{7C8D2787-D4A0-4146-81ED-41F51256CF4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Samples.DB.InMemory.Tests", "tests\EntityFramework.Samples.DB.InMemory.Tests\EntityFramework.Samples.DB.InMemory.Tests.csproj", "{D26EA15F-C61B-43BE-BE31-15B4DFC25CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Samples.DB.InMemory.Tests", "tests\EntityFramework.Samples.DB.InMemory.Tests\EntityFramework.Samples.DB.InMemory.Tests.csproj", "{D26EA15F-C61B-43BE-BE31-15B4DFC25CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Samples.Web", "src\EntityFramework.Samples.Web\EntityFramework.Samples.Web.csproj", "{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Samples.Web.Integration.Tests", "tests\EntityFramework.Samples.Web.Integration.Tests\EntityFramework.Samples.Web.Integration.Tests.csproj", "{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +48,14 @@ Global
 		{D26EA15F-C61B-43BE-BE31-15B4DFC25CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D26EA15F-C61B-43BE-BE31-15B4DFC25CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D26EA15F-C61B-43BE-BE31-15B4DFC25CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +64,8 @@ Global
 		{991A64FD-F56F-4B8D-822F-86695235F4CC} = {9797F86B-DE2C-4ADF-A272-BD26EB93777B}
 		{7C8D2787-D4A0-4146-81ED-41F51256CF4A} = {451A9A9C-3B71-45E2-8828-5DE282505557}
 		{D26EA15F-C61B-43BE-BE31-15B4DFC25CFC} = {451A9A9C-3B71-45E2-8828-5DE282505557}
+		{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C} = {9797F86B-DE2C-4ADF-A272-BD26EB93777B}
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91} = {451A9A9C-3B71-45E2-8828-5DE282505557}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4C13989-AC9F-4DF9-ADB1-E0676BF4D5EB}

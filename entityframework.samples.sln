@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Samples.DB.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Samples.Web", "src\EntityFramework.Samples.Web\EntityFramework.Samples.Web.csproj", "{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Samples.Web.Integration.Tests", "tests\EntityFramework.Samples.Web.Integration.Tests\EntityFramework.Samples.Web.Integration.Tests.csproj", "{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{7C8D2787-D4A0-4146-81ED-41F51256CF4A} = {451A9A9C-3B71-45E2-8828-5DE282505557}
 		{D26EA15F-C61B-43BE-BE31-15B4DFC25CFC} = {451A9A9C-3B71-45E2-8828-5DE282505557}
 		{45247A18-748E-42C8-9BE7-C2A8B6D9AB6C} = {9797F86B-DE2C-4ADF-A272-BD26EB93777B}
+		{B5FDCD8C-2D97-4F95-BD86-1D71F9FA8A91} = {451A9A9C-3B71-45E2-8828-5DE282505557}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4C13989-AC9F-4DF9-ADB1-E0676BF4D5EB}

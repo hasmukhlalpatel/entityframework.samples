@@ -1,6 +1,6 @@
 namespace EntityFramework.Samples.DB.Tests;
 
-public class EagerLoadingTests : EagerLoadDbTestBase
+public class EagerLoadingWithIncludeTests : EagerLoadDbTestBase
 {
     [Fact]
     public void NoEagerLoadingWithOrdersAndOrderItems()
@@ -38,7 +38,7 @@ public class EagerLoadingTests : EagerLoadDbTestBase
         using var dbContext = CreateDbContext();
         var orders = dbContext
             .Orders
-            .Include(x => x.OrderItems.Where(x=>x.OrderPrice >= 5))
+            .Include(x => x.OrderItems.Where(item=>item.OrderPrice >= 5))
             .Where(x => x.Id == 1)
             .ToList();
 
